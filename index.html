@@ -4,40 +4,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mutaiyyba's Birthday 🎀</title>
+<title>Happy Birthday Mutaiyyba 🎀</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 :root{
 --pink:#ff82a9;
 --dark:#c04478;
 --light:#fff0f5;
 --soft:#ffe0eb;
---gold:#e8bd70;
+}
+
+html,body{
+width:100%;
+height:100%;
+overflow:hidden !important;
+overscroll-behavior:none;
 }
 
 body{
 font-family:'Poppins',sans-serif;
 background:#fff0f5;
 color:#873c5b;
-overflow:hidden;
 }
 
 .page{
 display:none;
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
 height:100dvh;
-min-height:100vh;
 overflow-y:auto;
+overflow-x:hidden;
+overscroll-behavior:contain;
+-webkit-overflow-scrolling:touch;
 padding:35px 17px 100px;
 text-align:center;
-position:relative;
-animation:pageIn .6s ease;
+animation:pageIn .5s ease;
 }
 
-.page.active{display:block}
+.page.active{
+display:block;
+}
+
+.hero{
+background:linear-gradient(145deg,#ffe0eb,#fff7fa,#ffd1e1);
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.hero.active{
+display:flex;
+}
 
 @keyframes pageIn{
 from{opacity:0;transform:translateX(25px)}
@@ -49,26 +76,27 @@ font-family:'Great Vibes',cursive;
 color:#d34d83;
 }
 
-h2{font-size:47px;margin:16px 0}
-
-p{font-size:14px;line-height:2}
-
-.hero{
-background:linear-gradient(145deg,#ffe0eb,#fff7fa,#ffd1e1);
-display:none;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+h2{
+font-size:48px;
+margin:16px 0 23px;
 }
 
-.hero.active{display:flex}
-
-.hero h1{font-size:clamp(55px,13vw,80px)}
-.hero h2{font-size:58px}
+p{
+font-size:14px;
+line-height:2;
+}
 
 .bow{
 font-size:70px;
 animation:float 3s infinite ease-in-out;
+}
+
+.hero h1{
+font-size:clamp(55px,13vw,80px);
+}
+
+.hero h2{
+font-size:58px;
 }
 
 @keyframes float{
@@ -77,7 +105,7 @@ animation:float 3s infinite ease-in-out;
 
 .btn{
 border:0;
-padding:13px 24px;
+padding:13px 23px;
 border-radius:30px;
 background:linear-gradient(135deg,#ff9cba,#d34d83);
 color:white;
@@ -89,16 +117,23 @@ box-shadow:0 5px 17px #e78ba8;
 cursor:pointer;
 }
 
-.btn:active{transform:scale(.94)}
+.btn:active{
+transform:scale(.94);
+}
 
 .back{
-background:#fff;
+background:white;
 color:#c04478;
 border:1px solid #f4b2ca;
 }
 
+.ribbon{
+font-size:35px;
+margin:18px;
+}
+
 .card{
-background:#ffffffdd;
+background:#ffffffed;
 border:1px solid #ffd1e1;
 border-radius:24px;
 padding:23px 17px;
@@ -107,9 +142,10 @@ max-width:480px;
 box-shadow:0 6px 22px #e8a7bf44;
 }
 
-.card h3{color:#c04478;margin-bottom:12px}
-
-.emoji{font-size:42px;margin-bottom:12px}
+.card h3{
+color:#c04478;
+margin-bottom:12px;
+}
 
 .wish{
 background:white;
@@ -118,6 +154,11 @@ padding:21px;
 margin:15px auto;
 max-width:480px;
 box-shadow:0 4px 15px #e8a7bf44;
+}
+
+.emoji{
+font-size:42px;
+margin-bottom:12px;
 }
 
 .dua{
@@ -130,8 +171,6 @@ line-height:2;
 font-size:14px;
 box-shadow:0 4px 13px #e7a8be44;
 }
-
-.page-title{margin:15px 0 22px}
 
 .cake{
 font-size:115px;
@@ -213,56 +252,6 @@ font-size:14px;
 background:linear-gradient(145deg,#ffe0eb,#fff6f9,#ffd4e4);
 }
 
-.ribbon{font-size:35px;margin:15px}
-
-footer{
-padding:20px;
-color:#b54b79;
-}
-
-.nav{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-z-index:100;
-background:#fff9fcf5;
-backdrop-filter:blur(10px);
-padding:12px 10px;
-border-top:1px solid #ffd1e1;
-display:none;
-justify-content:center;
-align-items:center;
-gap:9px;
-}
-
-.nav button{
-margin:0;
-padding:11px 17px;
-}
-
-#pageNumber{
-font-size:11px;
-color:#c04478;
-font-weight:600;
-}
-
-.dots{
-display:flex;
-justify-content:center;
-gap:7px;
-margin:20px;
-}
-
-.dot{
-width:8px;
-height:8px;
-border-radius:50%;
-background:#f5bfd2;
-}
-
-.dot.current{background:#c04478;width:20px;border-radius:10px}
-
 #decorations{
 position:fixed;
 inset:0;
@@ -279,7 +268,10 @@ opacity:.8;
 }
 
 @keyframes rise{
-to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+to{
+transform:translateY(-110vh) rotate(360deg);
+opacity:0;
+}
 }
 
 .confetti{
@@ -291,13 +283,44 @@ animation:fall 3s linear forwards;
 }
 
 @keyframes fall{
-to{transform:translateY(110vh) rotate(700deg);opacity:0}
+to{
+transform:translateY(110vh) rotate(700deg);
+opacity:0;
+}
+}
+
+.nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+z-index:100;
+background:#fff9fcf5;
+backdrop-filter:blur(10px);
+padding:12px 7px;
+border-top:1px solid #ffd1e1;
+display:none;
+justify-content:center;
+align-items:center;
+gap:7px;
+}
+
+.nav button{
+margin:0;
+padding:11px 15px;
+}
+
+#pageNumber{
+font-size:11px;
+color:#c04478;
+font-weight:600;
 }
 
 @media(max-width:380px){
 h2{font-size:40px}
 .page{padding-left:12px;padding-right:12px}
 .love-line{font-size:10px}
+.nav button{padding:10px 12px;font-size:11px}
 }
 </style>
 </head>
@@ -306,13 +329,15 @@ h2{font-size:40px}
 
 <div id="decorations"></div>
 
-<!-- PAGE 1: WELCOME -->
+<!-- PAGE 1 -->
 <section class="page hero active" id="p1">
 
 <div class="bow">🎀</div>
+
 <p>♡ A SPECIAL DAY FOR SOMEONE SPECIAL ♡</p>
 
 <h1>Happy Birthday</h1>
+
 <h2>Mutaiyyba ❤️</h2>
 
 <div class="ribbon">🎂 🎈 🧸 🎀 🌸</div>
@@ -326,13 +351,16 @@ made especially for you!
 Open Your Surprise 💌
 </button>
 
-<p style="margin-top:25px">Made with lots of love ❤️</p>
+<p style="margin-top:25px">
+Made with lots of love ❤️
+</p>
+
 </section>
 
-<!-- PAGE 2: BIRTHDAY WISHES -->
+<!-- PAGE 2 -->
 <section class="page" id="p2">
 
-<h2 class="page-title">Happy Birthday! 💗</h2>
+<h2>Happy Birthday! 💗</h2>
 
 <div class="wish">
 <div class="emoji">🎂🎉</div>
@@ -392,12 +420,13 @@ Happy birthday once again! 🎀
 </div>
 
 <div class="ribbon">🎈 🎀 🎈</div>
+
 </section>
 
-<!-- PAGE 3: CAKE -->
+<!-- PAGE 3 -->
 <section class="page" id="p3">
 
-<h2 class="page-title">Make A Wish! 🎂</h2>
+<h2>Make A Wish! 🎂</h2>
 
 <p>Your birthday cake is waiting for you!</p>
 
@@ -423,12 +452,13 @@ May your wishes come true. 💗
 </div>
 
 <div class="balloons">🎈 🧸 🎀 🎈</div>
+
 </section>
 
-<!-- PAGE 4: DUAS -->
+<!-- PAGE 4 -->
 <section class="page" id="p4">
 
-<h2 class="page-title">Special Duas For You 🤲</h2>
+<h2>Special Duas For You 🤲</h2>
 
 <div class="dua">
 🌸 May Allah bless you with a long,
@@ -496,10 +526,10 @@ Ameen Summa Ameen.
 
 </section>
 
-<!-- PAGE 5: LOVE METER -->
+<!-- PAGE 5 -->
 <section class="page" id="p5">
 
-<h2 class="page-title">How Much I Love You? 🫀</h2>
+<h2>How Much I Love You? 🫀</h2>
 
 <div class="heart">💗</div>
 
@@ -530,10 +560,10 @@ happiness and best wishes for you! ❤️
 
 </section>
 
-<!-- PAGE 6: LETTER -->
+<!-- PAGE 6 -->
 <section class="page" id="p6">
 
-<h2 class="page-title">A Little Letter For You 💌</h2>
+<h2>A Little Letter For You 💌</h2>
 
 <div style="font-size:75px">💌</div>
 
@@ -580,7 +610,7 @@ Happy Birthday! 🎂
 
 </section>
 
-<!-- PAGE 7: FINAL SURPRISE -->
+<!-- PAGE 7 -->
 <section class="page final" id="p7">
 
 <div class="bow">🎀</div>
@@ -628,17 +658,17 @@ Start Again ↻
 
 </section>
 
-<!-- PAGE NAVIGATION -->
+<!-- BUTTONS -->
 <div class="nav" id="navigation">
 
 <button class="btn back" id="prevBtn" onclick="previousPage()">
 ← Back
 </button>
 
-<span id="pageNumber">1 / 7</span>
+<span id="pageNumber">2 / 7</span>
 
 <button class="btn" id="nextBtn" onclick="nextPage()">
-Next Page → 
+Next Page →
 </button>
 
 </div>
@@ -654,11 +684,13 @@ function goToPage(number){
 
 if(number<1 || number>totalPages)return;
 
-document.getElementById("p"+currentPage).classList.remove("active");
+document.getElementById("p"+currentPage)
+.classList.remove("active");
 
 currentPage=number;
 
 const newPage=document.getElementById("p"+currentPage);
+
 newPage.classList.add("active");
 newPage.scrollTop=0;
 
@@ -696,13 +728,14 @@ goToPage(currentPage-1);
 }
 }
 
-// LOVE METER: ALL 100 LINES
+// GENERATE ALL 100 LOVE LINES
 
 const loveList=document.getElementById("loveList");
 
 for(let i=1;i<=100;i++){
 
 const line=document.createElement("div");
+
 line.className="love-line";
 
 const indent=Math.round(
@@ -718,7 +751,7 @@ loveList.appendChild(line);
 
 }
 
-// ANIMATED LOVE METER
+// LOVE METER
 
 let loveStarted=false;
 
@@ -749,7 +782,9 @@ clearInterval(timer);
 
 // FLOATING DECORATIONS
 
-const symbols=["💗","💕","🎀","✨","🌸","💖","🦋","🎈"];
+const symbols=[
+"💗","💕","🎀","✨","🌸","💖","🦋","🎈"
+];
 
 function createDecoration(){
 
@@ -761,10 +796,13 @@ item.innerText=
 symbols[Math.floor(Math.random()*symbols.length)];
 
 item.style.left=Math.random()*100+"vw";
+
 item.style.fontSize=(15+Math.random()*20)+"px";
+
 item.style.animationDuration=(5+Math.random()*6)+"s";
 
-document.getElementById("decorations").appendChild(item);
+document.getElementById("decorations")
+.appendChild(item);
 
 setTimeout(()=>item.remove(),11000);
 
@@ -772,11 +810,13 @@ setTimeout(()=>item.remove(),11000);
 
 setInterval(createDecoration,700);
 
-// BIRTHDAY CONFETTI
+// CONFETTI
 
 function celebrate(){
 
-const emojis=["🎉","💗","🎊","✨","🌸","🎀","🎈"];
+const emojis=[
+"🎉","💗","🎊","✨","🌸","🎀","🎈"
+];
 
 for(let i=0;i<45;i++){
 
@@ -788,8 +828,11 @@ piece.innerText=
 emojis[Math.floor(Math.random()*emojis.length)];
 
 piece.style.left=Math.random()*100+"vw";
+
 piece.style.fontSize=(15+Math.random()*20)+"px";
-piece.style.animationDuration=(2+Math.random()*2)+"s";
+
+piece.style.animationDuration=
+(2+Math.random()*2)+"s";
 
 document.body.appendChild(piece);
 
@@ -799,7 +842,7 @@ setTimeout(()=>piece.remove(),4500);
 
 }
 
-// BLOW CANDLES
+// CAKE
 
 function blowCandles(){
 
