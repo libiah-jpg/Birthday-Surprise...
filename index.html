@@ -1,202 +1,683 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Birthday Surprise ❤️</title>
+<title>Happy Birthday Mutaiyyba 🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;background:#16080e;color:#fff1e8;
- font-family:Georgia,serif;text-align:center;
- overflow-x:hidden
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.page{
- display:none;min-height:100vh;padding:65px 20px;
- justify-content:center;align-items:center;flex-direction:column;
- background:radial-gradient(circle,#572033,#16080e 75%);
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f5;
+  color: #853b59;
+  overflow-x: hidden;
 }
-.page.active{display:flex}
-h1{color:#f5d49b;font-size:clamp(30px,6vw,48px)}
-h2{color:#f5d49b}
-p{font-size:19px;line-height:1.8;max-width:750px}
-.gold{color:#f5d49b}
-button{
- background:#e5bd83;color:#32101d;border:0;
- padding:13px 28px;border-radius:30px;
- font-size:17px;cursor:pointer;margin:20px 8px;
+
+:root {
+  --pink: #ff80a9;
+  --dark: #a83f6a;
+  --light: #fff0f5;
+  --soft: #ffe0eb;
+  --gold: #e5b85c;
 }
-button:hover{background:#fff0d3}
-.card{
- max-width:750px;width:100%;padding:28px;
- border:1px solid #c99b63;border-radius:20px;
- background:#260e19;box-shadow:0 0 30px #a66a6a33;
+
+section {
+  padding: 75px 18px;
+  text-align: center;
+  position: relative;
 }
-.poster{
- max-width:340px;width:90%;padding:15px;
- margin:20px auto;border:2px solid #e5bd83;
- background:#fff0df;color:#4b1829;
- box-shadow:0 0 30px #d4a35c55;
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 49px;
+  color: #d34d83;
+  margin-bottom: 22px;
 }
-.poster img{width:100%;display:block;border-radius:8px}
-.poster h2{color:#70243b}
-.letter{max-width:330px;width:90%;border:5px solid #e5bd83}
-.list{
- max-height:300px;overflow-y:auto;line-height:2;
- padding:15px;color:#ffe5c6;
+
+p {
+  line-height: 1.9;
+  font-size: 14px;
 }
-.heart{
- position:fixed;bottom:-30px;z-index:5;
- color:#ff789c;animation:fly 8s linear infinite;
- pointer-events:none
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(145deg,#ffe2ec,#fff5f8,#ffd2e2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 18px;
+  overflow: hidden;
 }
-@keyframes fly{
- 0%{transform:translateY(0) rotate(0);opacity:0}
- 15%{opacity:1}
- 100%{transform:translateY(-115vh) rotate(360deg);opacity:0}
+
+.bow {
+  font-size: 65px;
+  animation: float 3s infinite ease-in-out;
 }
-.small{letter-spacing:5px;color:#e8bd8b}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  color: #d34d83;
+  font-size: clamp(53px, 12vw, 78px);
+  margin: 10px 0;
+}
+
+.hero h3 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.hero p {
+  margin: 17px 0 25px;
+}
+
+.btn {
+  background: linear-gradient(135deg,#f77fa7,#d34d83);
+  color: white;
+  border: none;
+  padding: 14px 27px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 5px 18px #e78ba8;
+  transition: .3s;
+}
+
+.btn:active { transform: scale(.94); }
+
+.ribbon {
+  font-size: 28px;
+  margin: 12px;
+}
+
+.floating {
+  position: fixed;
+  bottom: -40px;
+  z-index: 10;
+  pointer-events: none;
+  animation: rise linear infinite;
+  opacity: .7;
+}
+
+@keyframes rise {
+  to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+.card {
+  background: rgba(255,255,255,.8);
+  padding: 27px 20px;
+  border-radius: 25px;
+  margin: 18px auto;
+  max-width: 500px;
+  box-shadow: 0 7px 25px #e8a7bf55;
+  border: 1px solid #ffd1e1;
+}
+
+.card h3 {
+  color: #c34b7b;
+  margin-bottom: 12px;
+}
+
+.wishes {
+  background: linear-gradient(#fff0f5,#ffe2ed);
+}
+
+.wish {
+  margin: 15px auto;
+  max-width: 500px;
+  padding: 22px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px #e8a7bf44;
+}
+
+.wish .emoji {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.cake-area {
+  background: #fff8fa;
+}
+
+.cake {
+  font-size: 105px;
+  animation: float 2.5s infinite;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.cake-note {
+  font-size: 12px;
+  color: #b56c88;
+}
+
+.duas {
+  background: linear-gradient(140deg,#ffe5ef,#fff5f8);
+}
+
+.dua {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 18px;
+  max-width: 500px;
+  font-size: 14px;
+  line-height: 2;
+  box-shadow: 0 4px 12px #e7a8be44;
+}
+
+.love {
+  background: #fff9fb;
+}
+
+.heart {
+  font-size: 85px;
+  animation: beat 1s infinite;
+  margin: 15px;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.18); }
+}
+
+.meter {
+  background: #ffe1eb;
+  height: 19px;
+  max-width: 340px;
+  margin: 25px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg,#ff9abb,#d34d83);
+  border-radius: 20px;
+  transition: width 3s ease;
+}
+
+.percent {
+  font-size: 30px;
+  color: #d34d83;
+  font-weight: 700;
+}
+
+.letter {
+  background: white;
+  border: 2px dashed #f3a1bc;
+  padding: 25px 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  display: none;
+  line-height: 2;
+  font-size: 14px;
+}
+
+footer {
+  background: #f9b8cf;
+  color: #873c5b;
+  padding: 35px 15px;
+  text-align: center;
+}
+
+footer h2 {
+  color: white;
+  font-size: 45px;
+}
+
+.sparkle {
+  font-size: 22px;
+  letter-spacing: 8px;
+}
+
+@media(max-width: 380px) {
+  section { padding: 60px 13px; }
+  h2 { font-size: 42px; }
+}
 </style>
 </head>
 
 <body>
 
-<section class="page active">
- <div class="small">A LITTLE SURPRISE FOR YOU</div>
- <h1>Someone Special Has a Birthday ❤️</h1>
- <p>Today is all about celebrating you. I have made something special with lots of love.</p>
- <button onclick="nextPage()">Open Your Surprise 💌</button>
+<!-- FLOATING DECORATIONS -->
+<div id="decorations"></div>
+
+<!-- WELCOME SCREEN -->
+<section class="hero" id="home">
+
+  <div class="bow">🎀</div>
+
+  <h3>A SPECIAL DAY FOR SOMEONE SPECIAL</h3>
+
+  <h1>Happy Birthday</h1>
+
+  <h2 style="font-family:'Great Vibes';font-size:55px;">
+    Mutaiyyba ❤️
+  </h2>
+
+  <p>
+    A little world of love, happiness and surprises,
+    made especially for you! 🌸
+  </p>
+
+  <div class="ribbon">🎂 🎈 🧸 🎀</div>
+
+  <button class="btn" onclick="openSurprise()">
+    Open Your Surprise 💌
+  </button>
+
+  <p style="margin-top:25px">Made with lots of love ❤️</p>
 </section>
 
-<section class="page">
- <div class="small">TODAY IS YOUR DAY</div>
- <h1>Happy Birthday My Love ❤️</h1>
- <div class="poster">
-  <img src="libiah.jpg" alt="Birthday picture">
-  <h2>Happy Birthday My Man</h2>
-  <p>My favourite person. My happiness. My beautiful blessing. ❤️</p>
- </div>
- <p class="gold">My Husband • My Soulmate • My Forever Person</p>
- <p>May your day be as wonderful as your heart.</p>
- <button onclick="nextPage()">Next ❤️</button>
+
+<!-- BIRTHDAY WISH -->
+<section class="wishes" id="wishes">
+
+  <h2>It's Your Special Day! 💗</h2>
+
+  <div class="wish">
+    <div class="emoji">🎂🎉</div>
+    <h3>Happy Birthday, Dear!</h3>
+    <p>
+      Happiest birthday to you, Mutaiyyba!
+      May your special day be filled with endless
+      smiles, beautiful memories, sweet surprises
+      and all the happiness your heart deserves.
+      You deserve all the beautiful things in life! 💕
+    </p>
+  </div>
+
+  <div class="wish">
+    <div class="emoji">🦋🌷</div>
+    <h3>Stay Beautiful Always</h3>
+    <p>
+      May your smile never fade, your heart
+      always stay peaceful and your life be
+      surrounded by people who genuinely love you.
+      Keep shining and spreading happiness! ✨
+    </p>
+  </div>
+
+  <div class="wish">
+    <div class="emoji">💞</div>
+    <h3>A Little Friendship Message</h3>
+    <p>
+      Some people make ordinary days feel special.
+      You are one of those beautiful people.
+      I hope this new chapter brings you countless
+      reasons to smile and memories to treasure.
+      Always stay the wonderful person you are! 🥹
+    </p>
+  </div>
+
 </section>
 
-<section class="page">
- <h1>My Wishes & Duas 🤲</h1>
- <div class="card list" id="wishes"></div>
- <button onclick="nextPage()">More Love 💗</button>
+
+<!-- CAKE -->
+<section class="cake-area">
+
+  <h2>Make A Wish! 🎂</h2>
+
+  <p>Your birthday cake is waiting for you!</p>
+
+  <div class="cake" onclick="blowCandles()">
+    🎂
+  </div>
+
+  <p id="cakeMessage">
+    Tap your cake to blow the candles! 🕯️
+  </p>
+
+  <br>
+
+  <button class="btn" onclick="celebrate()">
+    Celebrate! 🎉
+  </button>
+
 </section>
 
-<section class="page">
- <h1>100 Kisses For You 💋</h1>
- <div class="card list" id="kisses"></div>
- <button onclick="nextPage()">Keep Going ❤️</button>
+
+<!-- DUAS -->
+<section class="duas">
+
+  <h2>Special Duas For You 🤲</h2>
+
+  <div class="dua">
+    🌸 May Allah bless you with a long,
+    healthy and beautiful life filled with
+    peace, happiness and countless blessings.
+    Ameen! ❤️
+  </div>
+
+  <div class="dua">
+    🤍 May Allah grant you everything that is
+    good for you, accept all your sincere duas
+    and protect you from every difficulty.
+    Ameen Summa Ameen.
+  </div>
+
+  <div class="dua">
+    🌷 May every coming year bring you closer
+    to your dreams, your goals and everything
+    that makes your heart happy.
+  </div>
+
+  <div class="dua">
+    🕊️ May Allah always keep your parents
+    healthy and happy, bless your family
+    and fill your home with barakah.
+    Ameen.
+  </div>
+
+  <div class="dua">
+    💗 May Allah give you success in this life
+    and the Hereafter, keep your heart content
+    and make every difficult path easy for you.
+    Ameen.
+  </div>
+
+  <div class="dua">
+    ✨ May your life be full of halal happiness,
+    beautiful opportunities, genuine friendships
+    and countless reasons to say Alhamdulillah.
+  </div>
+
+  <div class="dua">
+    🌹 Always khush rahe aap.
+    Allah aapko har jayaz khushi se nawaze.
+    Ameen Summa Ameen! ❤️
+  </div>
+
 </section>
 
-<section class="page">
- <h1>100 Reasons To Say...</h1>
- <div class="card list" id="love"></div>
- <button onclick="nextPage()">A Letter For You 💌</button>
+
+<!-- LOVE METER -->
+<section class="love">
+
+  <h2>How Much I Love You? 🫀</h2>
+
+  <div class="heart">💗</div>
+
+  <p>My love for you is...</p>
+
+  <div class="percent" id="percent">0%</div>
+
+  <div class="meter">
+    <div class="fill" id="fill"></div>
+  </div>
+
+  <h3>INFINITY AND BEYOND! ♾️</h3>
+
+  <p style="margin-top:15px">
+    No percentage can measure how special
+    you are. Sending you love from 1% to 100%!
+  </p>
+
+  <div class="card" style="margin-top:25px">
+    <h3>🎀 100% LOVE 🎀</h3>
+    <p>
+      🎀 I love you 🫀 1%<br>
+      🎀 I love you 🫀 2%<br>
+      🎀 I love you 🫀 3%<br>
+      🎀 I love you 🫀 4%<br>
+      🎀 I love you 🫀 5%<br>
+      ...<br>
+      🎀 I love you 🫀 50%<br>
+      ...<br>
+      🎀 I love you 🫀 99%<br>
+      🎀 I love you 🫀 100% ❤️
+    </p>
+    <p style="margin-top:12px">
+      Every single percentage comes with
+      lots of love! 🥹
+    </p>
+  </div>
+
 </section>
 
-<section class="page">
- <div class="small">FROM MY HEART TO YOURS</div>
- <h1>Your Little Letter 💌</h1>
- <p>There are some feelings that words cannot fully explain...</p>
- <img class="letter" src="Whatsapp Image 2026-11-11 at 4.27.28 PM.jpeg" alt="My handwritten letter">
- <p class="gold">A little piece of my heart, written just for you. ❤️</p>
- <button onclick="nextPage()">One More Surprise 🎀</button>
+
+<!-- SPECIAL LETTER -->
+<section>
+
+  <h2>A Little Letter For You 💌</h2>
+
+  <div style="font-size:60px">💌</div>
+
+  <p>There is something special waiting for you...</p>
+
+  <br>
+
+  <button class="btn" onclick="showLetter()">
+    Open My Letter 💗
+  </button>
+
+  <div class="letter" id="letter">
+
+    <h3 style="color:#d34d83">
+      Dear Mutaiyyba! 🎀
+    </h3>
+
+    You are truly a special person and I wish
+    nothing but beautiful things for you.
+
+    May you always find happiness in little things,
+    strength in difficult moments and peace in
+    every step of your journey.
+
+    Never stop smiling, dreaming or believing
+    in yourself.
+
+    I hope your birthday is as lovely as your
+    heart and your future is even more beautiful
+    than your dreams.
+
+    Stay blessed, stay happy and always keep
+    shining!
+
+    <br><br>
+
+    Lots and lots of love! 🫀
+
+    <h2 style="font-size:38px;margin-top:15px">
+      Happy Birthday! 🎂
+    </h2>
+
+    <div style="font-size:32px">🎀💗🌸</div>
+
+  </div>
+
 </section>
 
-<section class="page">
- <h1>Hear My Voice 🎧</h1>
- <p>I wanted you to hear my wishes in my own voice.</p>
- <div class="card">
-  <p class="gold">A special voice message, just for you ❤️</p>
-  <audio controls preload="metadata" style="width:100%">
-   <source src="Whatsapp Audio 2026-11-11 at 2.43.11 PM.ogg
-   " type="audio/ogg">
-   Your browser does not support this audio.
-  </audio>
- </div>
- <button onclick="nextPage()">Final Surprise 💋</button>
+
+<!-- FINAL SURPRISE -->
+<section style="background:#ffe3ed">
+
+  <div class="bow">🎀</div>
+
+  <h2>One Last Thing...</h2>
+
+  <div class="card">
+
+    <div style="font-size:48px">🧸💗</div>
+
+    <h3>To My Special Girl!</h3>
+
+    <p>
+      May your life always be filled with
+      love, laughter, success and endless
+      blessings.
+
+      Never forget how precious and special
+      you are.
+
+      Keep smiling, birthday girl! 🥹
+    </p>
+
+    <h2 style="font-size:40px;margin-top:20px">
+      Happy Birthday! ❤️
+    </h2>
+
+    <div class="sparkle">✨ 🎀 ✨</div>
+
+  </div>
+
 </section>
 
-<section class="page">
- <div class="small">WITH ALL MY LOVE</div>
- <h1>Happy Birthday My Soulmate ❤️</h1>
- <p>Happy Birthday My Love.</p>
- <p>Happy Birthday My Man.</p>
- <p>My Husband. My Soulmate. My Favourite Human.</p>
- <p>May Allah always protect you, bless you with happiness, success, good health and endless peace.</p>
- <h1>Ummmmmaaaaaahhhhhh 💋</h1>
- <p class="gold">You deserve all the happiness in this world. ❤️</p>
- <p>Always sending you love, duas and a million kisses.</p>
- <h2>THE END... BUT MY LOVE HAS NO END ❤️</h2>
-</section>
+
+<footer>
+
+  <h2>With Love 💗</h2>
+
+  <p>
+    Made especially for Mutaiyyba
+    <br>
+    A little surprise to make your day sweeter.
+  </p>
+
+  <div style="font-size:35px;margin:15px">
+    🎀 🎂 🎈 💗
+  </div>
+
+  <p>Forever special! ♡</p>
+
+</footer>
+
 
 <script>
-let current=0;
-const pages=document.querySelectorAll('.page');
 
-function nextPage(){
- pages[current].classList.remove('active');
- current++;
- if(current>=pages.length)current=0;
- pages[current].classList.add('active');
- window.scrollTo(0,0);
+// FLOATING HEARTS AND DECORATIONS
+
+const symbols = ["💗","💕","🎀","✨","🌸","💖","🦋"];
+
+function createDecoration() {
+  const item = document.createElement("div");
+  item.className = "floating";
+  item.innerHTML =
+    symbols[Math.floor(Math.random()*symbols.length)];
+
+  item.style.left = Math.random()*100 + "vw";
+  item.style.fontSize = (15+Math.random()*20)+"px";
+  item.style.animationDuration = (5+Math.random()*6)+"s";
+
+  document.body.appendChild(item);
+
+  setTimeout(()=>item.remove(),11000);
 }
 
-const duas=[
-"May Allah bless you with a long, happy and healthy life. 🤲",
-"May every good dream of yours come true.",
-"May Allah protect you from every difficulty.",
-"May your heart always remain peaceful.",
-"May success find you wherever you go.",
-"May Allah put barakah in everything you do.",
-"May your smile never fade.",
-"May your days be filled with happiness.",
-"May Allah keep you safe and surrounded by goodness.",
-"May all your sincere prayers be accepted."
-];
+setInterval(createDecoration,500);
 
-const extra=[
-"Happy Birthday My Love ❤️",
-"Happy Birthday My Man ❤️",
-"May Allah grant you endless happiness.",
-"You deserve every beautiful thing in life.",
-"May your future be brighter than your dreams.",
-"May you always have reasons to smile.",
-"May Allah guide you towards what is best.",
-"May your efforts bring wonderful results.",
-"May peace and love always surround you.",
-"Stay blessed, happy and healthy."
-];
 
-document.getElementById('wishes').innerHTML=
-[...duas,...extra,...duas,...extra].map(x=>`<p>${x}</p>`).join('');
+// OPEN SURPRISE
 
-document.getElementById('kisses').innerHTML=
-Array.from({length:100},(_,i)=>`<p>${i+1}. Ummmmmaaaaaahhhhhh 💋</p>`).join('');
+function openSurprise() {
+  document.getElementById("wishes").scrollIntoView({
+    behavior:"smooth"
+  });
 
-document.getElementById('love').innerHTML=
-Array.from({length:100},(_,i)=>`<p>${i+1}. I Love You ❤️</p>`).join('');
-
-function floatingHeart(){
- const h=document.createElement('div');
- h.className='heart';
- h.innerHTML=['❤️','💗','💕','💖','💘'][Math.floor(Math.random()*5)];
- h.style.left=Math.random()*100+'vw';
- h.style.fontSize=(18+Math.random()*22)+'px';
- h.style.animationDuration=(6+Math.random()*6)+'s';
- document.body.appendChild(h);
- setTimeout(()=>h.remove(),12000);
+  celebrate();
 }
-setInterval(floatingHeart,450);
+
+
+// CAKE CANDLES
+
+function blowCandles() {
+  document.getElementById("cakeMessage").innerHTML =
+    "Candles blown! Make your sweetest wish! 🥹💗";
+  celebrate();
+}
+
+
+// CONFETTI
+
+function celebrate() {
+  const emojis = ["🎉","💗","🎊","✨","🌸","🎀"];
+
+  for(let i=0;i<35;i++) {
+    const piece = document.createElement("div");
+
+    piece.style.position = "fixed";
+    piece.style.left = Math.random()*100+"vw";
+    piece.style.top = "-30px";
+    piece.style.zIndex = "999";
+    piece.style.fontSize = "24px";
+    piece.style.pointerEvents = "none";
+
+    piece.innerHTML =
+      emojis[Math.floor(Math.random()*emojis.length)];
+
+    document.body.appendChild(piece);
+
+    const duration = 1800+Math.random()*1800;
+
+    piece.animate([
+      {transform:"translateY(0) rotate(0deg)",opacity:1},
+      {transform:`translateY(110vh) rotate(500deg)`,opacity:0}
+    ],{
+      duration:duration,
+      easing:"ease-in"
+    });
+
+    setTimeout(()=>piece.remove(),duration);
+  }
+}
+
+
+// LOVE METER
+
+let started = false;
+
+window.addEventListener("scroll",function() {
+  const meter = document.getElementById("percent");
+  const section = document.querySelector(".love");
+  const position = section.getBoundingClientRect();
+
+  if(position.top < window.innerHeight && !started) {
+    started = true;
+
+    let number = 0;
+
+    document.getElementById("fill").style.width="100%";
+
+    const timer = setInterval(()=>{
+      number++;
+      meter.innerHTML=number+"%";
+
+      if(number>=100) clearInterval(timer);
+    },30);
+  }
+});
+
+
+// LETTER
+
+function showLetter() {
+  const letter = document.getElementById("letter");
+
+  letter.style.display="block";
+  letter.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
 </script>
 
 </body>
 </html>
-```
